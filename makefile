@@ -9,7 +9,7 @@
 CC = g++
 STD = -std=c++11
 CFLAGS = -c -g -Wall
-SOURCES = main.cpp building.cpp person.cpp
+SOURCES = main.cpp building.cpp person.cpp student.cpp teacher.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 EXECUTABLE = lab4
 
