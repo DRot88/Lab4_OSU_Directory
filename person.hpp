@@ -3,13 +3,15 @@
 #include <string>
 using std::string;
 
-class Person {
+class People {
   private:
     string name;
     int age;
   public:
-    Person(string n, int a);
+    People(string n, int a);
     virtual void do_work(int x) = 0;
+    virtual string getName();
+    virtual int getAge();
 };
 
 #endif

@@ -13,6 +13,10 @@ class Building {
     void setName(string n);
     void setSize(double s);
     void setAddress(string a);
+    string getName();
+    double getSize();
+    string getAddress();
+    
 };
 
 #endif

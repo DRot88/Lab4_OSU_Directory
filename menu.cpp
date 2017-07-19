@@ -11,10 +11,10 @@ Menu::Menu() {
 void Menu::displayMenu() {
   int choice;
   cout << "\nWelcome to the Oregon State University Directory!" << endl << endl;
-  cout << "1: Print information for all of the buildings." << endl;
-  cout << "2: Print information for all of our students and faculty." << endl;
-  cout << "3: Choose a person to do work." << endl;
-  cout << "4: Exit." << endl << endl;
+  cout << "1: Print information for all of the buildings" << endl;
+  cout << "2: Print information for all of our students and faculty" << endl;
+  cout << "3: Choose a person to do work" << endl;
+  cout << "4: Exit" << endl << endl;
   cout << "Please choose from one of the above options: ";
   cin >> choice;
 
@@ -32,7 +32,7 @@ void Menu::displayMenu() {
       cout << "Exiting the program." << endl << endl;
       break;
     default :
-      cout << "Invalid choice." << endl << endl;
+      cout << "Invalid choice, exiting the program." << endl << endl;
   }
 
 }

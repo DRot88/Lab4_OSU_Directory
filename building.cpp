@@ -8,13 +8,25 @@ Building::Building(string n, double s, string a) {
 }
 
 void Building::setName(string n) {
-  name = n;
+  this->name = n;
 }
 
 void Building::setSize(double s) {
-  size = s;
+  this->size = s;
 }
 
 void Building::setAddress(string a) {
-  address = a;
+  this->address = a;
+}
+
+string Building::getName() {
+  return this->name;
+}
+
+double Building::getSize() {
+  return this->size;
+}
+
+string Building::getAddress() {
+  return this->address;
 }
