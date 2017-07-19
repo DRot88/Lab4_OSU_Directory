@@ -1,5 +1,5 @@
-#ifndef PERSON_HPP
-#define PERSON_HPP
+#ifndef PEOPLE_HPP
+#define PEOPLE_HPP
 #include <string>
 using std::string;
 

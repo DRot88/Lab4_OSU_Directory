@@ -20,10 +20,12 @@ void Menu::displayMenu() {
 
   switch(choice) {
     case 1 :
-      cout << "Below is a list of all of our building information: " << endl << endl;
+      cout << "\nBelow is a list of all of our building information: " << endl << endl;
+      uniPtr->printBuildingInfo();
       break;
     case 2 :
-      cout << "Below is a list of the information regarding our students and faculty: " << endl << endl;
+      cout << "\nBelow is a list of the information regarding our students and faculty: " << endl << endl;
+      uniPtr->printAllPeople();
       break;
     case 3 :
       //TODO ADD A SECOND MENU FOR THIS OPTION
@@ -35,4 +37,8 @@ void Menu::displayMenu() {
       cout << "Invalid choice, exiting the program." << endl << endl;
   }
 
+}
+
+void Menu::setUniversity(University * univ) {
+  uniPtr = univ;
 }

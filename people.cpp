@@ -1,4 +1,4 @@
-#include "person.hpp"
+#include "people.hpp"
 
 //constructor
 People::People(string n, int a) {

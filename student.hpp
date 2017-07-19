@@ -1,6 +1,6 @@
 #ifndef STUDENT_HPP
 #define STUDENT_HPP
-#include "person.hpp"
+#include "people.hpp"
 #include <string>
 using std::string;
 

@@ -1,7 +1,7 @@
 #ifndef UNIVERSITY_HPP
 #define UNIVERSITY_HPP
 #include "building.hpp"
-#include "person.hpp"
+#include "people.hpp"
 #include "student.hpp"
 #include "teacher.hpp"
 #include <string>
@@ -18,7 +18,7 @@ class University {
     vector<Student*> students;
     vector<Teacher*> teachers;
   public:
-    University(string n, int numBuildings, int numPeople);
+    University(string n);
     void addBuilding(Building);
     void addStudent(Student);
     void addTeacher(Teacher);

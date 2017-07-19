@@ -1,6 +1,6 @@
 #ifndef TEACHER_HPP
 #define TEACHER_HPP
-#include "person.hpp"
+#include "people.hpp"
 // #include <string>
 
 class Teacher : public People {

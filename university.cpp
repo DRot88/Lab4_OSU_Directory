@@ -5,10 +5,8 @@ using std::string;
 using std::cout;
 using std::endl;
 
-University::University(string n, int numBuildings, int numPeople) {
+University::University(string n) {
   name = n;
-  numOfBuildings = numBuildings;
-  numOfPeople = numPeople;
 }
 
 void University::addBuilding(Building building) {
@@ -39,7 +37,21 @@ void University::printTeacherInfo() {
     cout << "Instructor # " << x+1 << endl << endl;
     cout << "Name: " << teachers[x]->getName() << endl;
     cout << "Age: " << teachers[x]->getAge() << endl;
-    cout << "Ratings: " << teachers[x]->getRating() << endl << endl;
+    cout << "Rating: " << teachers[x]->getRating() << endl << endl;
   }
 }
 
+void University::printBuildingInfo() {
+  cout << "Building Information" << endl << endl;
+  for (int x = 0; x < buildings.size(); x++) {
+    cout << "Building # " << x+1 << endl << endl;
+    cout << "Name: " << buildings[x]->getName() << endl;
+    cout << "Size: " << buildings[x]->getSize() << " sqft" << endl;
+    cout << "Address: " << buildings[x]->getAddress() << endl << endl;
+  }
+}
+
+void University::printAllPeople() {
+  printTeacherInfo();
+  printStudentInfo();
+}
