@@ -14,9 +14,12 @@ class University {
     string name;
     int numOfBuildings;
     int numOfPeople;
+    int numOfStudents;
+    int numOfTeachers;
     vector<Building*> buildings;
     vector<Student*> students;
     vector<Teacher*> teachers;
+    friend class Menu;
   public:
     University(string n);
     void addBuilding(Building);
@@ -26,6 +29,12 @@ class University {
     void printStudentInfo();
     void printTeacherInfo();
     void printAllPeople();
+    int getNumOfBuildings();
+    int getNumOfPeople();
+    int getNumOfStudents();
+    int getNumOfTeachers();
+    void getStudentList();
+    void getTeacherList();
 };
 
 

@@ -9,7 +9,7 @@ class People {
     int age;
   public:
     People(string n, int a);
-    virtual void do_work(int x) = 0;
+    // virtual void do_work(int x) = 0;
     virtual string getName();
     virtual int getAge();
 };

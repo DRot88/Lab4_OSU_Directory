@@ -1,5 +1,7 @@
 #include "menu.hpp"
+#include "university.hpp"
 #include <iostream>
+#include <cstdlib>
 using std::cout;
 using std::cin;
 using std::endl;
@@ -20,15 +22,17 @@ void Menu::displayMenu() {
 
   switch(choice) {
     case 1 :
-      cout << "\nBelow is a list of all of our building information: " << endl << endl;
+      cout << "\nBelow is a list of our " << uniPtr->getNumOfBuildings();
+      cout << " buildings and all of their information: " << endl << endl;
       uniPtr->printBuildingInfo();
       break;
     case 2 :
-      cout << "\nBelow is a list of the information regarding our students and faculty: " << endl << endl;
+      cout << "\nBelow is a list of the information regarding our " << uniPtr->getNumOfStudents();
+      cout << " students and " << uniPtr->getNumOfTeachers() << " faculty members: " << endl << endl;
       uniPtr->printAllPeople();
       break;
     case 3 :
-      //TODO ADD A SECOND MENU FOR THIS OPTION
+      workMenu();
       break;
     case 4 :
       cout << "Exiting the program." << endl << endl;
@@ -41,4 +45,44 @@ void Menu::displayMenu() {
 
 void Menu::setUniversity(University * univ) {
   uniPtr = univ;
+}
+
+void Menu::workMenu() {
+  int choice;
+  cout << "\n1: Students" << endl;
+  cout << "2: Instructors" << endl << endl;
+  cout << "Who would you like to do work (Please choose from the options above): ";
+  cin >> choice;
+
+  switch (choice) {
+    case 1 :
+        int studentNum;
+        cout << endl;
+        uniPtr->getStudentList();
+        cout << "\nSelect what # student you would like to do work: ";
+        cin >> studentNum;
+        for (int x = 0; x < uniPtr->students.size(); x++) {
+          if (studentNum == x+1) {
+            Student worker = *uniPtr->students[x];
+            worker.do_work(x);
+          }
+        }
+      break;
+    case 2 :
+        int instructorNum;
+        cout << endl;
+        uniPtr->getTeacherList();
+        cout << "\nSelect what # instructor you would like to do work: ";
+        cin >> instructorNum;
+        for (int x = 0; x < uniPtr->teachers.size(); x++) {
+          if (instructorNum == x+1) {
+            Teacher worker = *uniPtr->teachers[x];
+            worker.do_work(x);
+          }
+        }        
+      break;
+    default :
+      cout << "Invalid choice, exiting the program." << endl << endl; 
+  }
+  return;
 }

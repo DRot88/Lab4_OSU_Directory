@@ -55,3 +55,35 @@ void University::printAllPeople() {
   printTeacherInfo();
   printStudentInfo();
 }
+
+int University::getNumOfBuildings() {
+  numOfBuildings = buildings.size();
+  return numOfBuildings;
+}
+
+int University::getNumOfPeople() {
+  numOfPeople = students.size() + teachers.size();
+  return numOfPeople;
+}
+
+int University::getNumOfStudents() {
+  numOfStudents = students.size();
+  return numOfStudents;
+}
+
+int University::getNumOfTeachers() {
+  numOfTeachers = teachers.size();
+  return numOfTeachers;
+}
+
+void University::getStudentList() {
+  for (int x = 0; x < students.size(); x++) {
+    cout << "Student # " << x + 1 << ": " << students[x]->getName() << endl;
+  }
+}
+
+void University::getTeacherList() {
+  for (int x = 0; x < teachers.size(); x++) {
+    cout << "Instructor # " << x + 1 << ": " << teachers[x]->getName() << endl;
+  }
+}

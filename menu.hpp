@@ -9,6 +9,7 @@ class Menu {
     Menu();
     void displayMenu();
     void setUniversity(University *univ);
+    void workMenu();
 };
 
 #endif
