@@ -10,7 +10,7 @@ class Student : public People {
   public:
     //Student Constructor
     Student(string n, int a, double gpa);
-    virtual void do_work(int x);
+    void do_work(int x);
     double getGPA();
 };
 

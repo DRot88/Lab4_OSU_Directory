@@ -1,3 +1,11 @@
+/****************************************************************
+** Author: Daniel Rotenberg
+** Date: 7/20/2017
+** Description: This program is designed to create a University
+                directory, containing information about students,
+                faculty members, and buildings.
+****************************************************************/
+
 #include "building.hpp"
 #include "people.hpp"
 #include "student.hpp"

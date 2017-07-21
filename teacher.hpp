@@ -9,7 +9,7 @@ class Teacher : public People {
   public:
     // Teacher constructor
     Teacher(string n, int a, double r);
-    virtual void do_work(int x);
+    void do_work(int x);
     double getRating();
 };
 

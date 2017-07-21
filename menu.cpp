@@ -10,6 +10,13 @@ Menu::Menu() {
   return;
 }
 
+/****************************************************************
+** Function: displayMenu
+** Description: This will welcome the user to the directory and
+                print out the available options. Depending on the
+                user input, it will call upon different functions.
+****************************************************************/
+
 void Menu::displayMenu() {
   int choice;
   cout << "\nWelcome to the Oregon State University Directory!" << endl << endl;
@@ -47,6 +54,11 @@ void Menu::setUniversity(University * univ) {
   uniPtr = univ;
 }
 
+/****************************************************************
+** Function: workMenu
+** Description: This will present the user with the option to 
+                choose a student or teacher to do work.
+****************************************************************/
 void Menu::workMenu() {
   int choice;
   cout << "\n1: Students" << endl;
@@ -61,8 +73,8 @@ void Menu::workMenu() {
         uniPtr->getStudentList();
         cout << "\nSelect what # student you would like to do work: ";
         cin >> studentNum;
-        for (int x = 0; x < uniPtr->students.size(); x++) {
-          if (studentNum == x+1) {
+        for (size_t x = 0; x < uniPtr->students.size(); x++) {
+          if ((size_t) studentNum == x+1) {
             Student worker = *uniPtr->students[x];
             worker.do_work(x);
           }
@@ -74,8 +86,8 @@ void Menu::workMenu() {
         uniPtr->getTeacherList();
         cout << "\nSelect what # instructor you would like to do work: ";
         cin >> instructorNum;
-        for (int x = 0; x < uniPtr->teachers.size(); x++) {
-          if (instructorNum == x+1) {
+        for (size_t x = 0; x < uniPtr->teachers.size(); x++) {
+          if ((size_t) instructorNum == x+1) {
             Teacher worker = *uniPtr->teachers[x];
             worker.do_work(x);
           }
